@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Guessing game</title>
+</head>
+
+<body>
+    <input type="text" id="guessBox"></input>
+    <button onclick="clickGuess()">Guess</button>
+    
+</body>
+<script>
+    //alert("works");
+
+    let Random;
+
+    function newRandom() {
+        Random = Math.floor(Math.random()*100+1);
+        return Random
+    }
+
+    newRandom()
+    let stNum = newRandom();
+    console.log(stNum);
+
+    guessBox.value = "guess the number";
+
+    function clickGuess() {
+        if (guessBox.value == Random){
+            guessBox.value = guessBox.value +" is correct!!!  (refresh)";
+        } else if (guessBox.value > Random){
+            guessBox.value = guessBox.value + " too big";
+            
+        } else if (guessBox.value < Random){
+            guessBox.value = guessBox.value + " too small";
+            
+        }
+    }
+
+    /*
+    function newRandom(){
+        Random = Math.floor(Math.random()*100+1)
+        return Random
+    }
+
+    const stNum = newRandom()
+    console.log(stNum)
+
+
+    if (guess.value = Random)
+*/
+
+
+
+
+
+    /*
+    alert(`Press "OK" to start the guessing game!`)
+    let Random;
+    let True;
+
+    True = 1;
+
+    Random = Math.floor(Math.random()*100+1)
+    
+
+    
+    while(True = 1){
+
+        let Guess = prompt("guess the number? (between 1 - 100)");
+
+        if (Guess == Random) {
+            alert(`nice one you got it the number was ${Random} but not anymore`);
+            prompt;
+            Random = Math.floor(Math.random()*100+1);
+        } else if (Guess < Random) {
+            alert(Guess + " is too small")
+        } else {
+            alert(Guess + " is too big")
+        }
+    }
+    */
+
+</script>
+
+</html>
